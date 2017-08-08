@@ -1,107 +1,43 @@
--- This assignment is intended to get you more familiar with reading from a sql database. You will take the included sql and load the database. Then complete the normal mode objectives.
+-- Using the movie database, provide a SQL query that can be used to return the requested data for each problem described below:
 --
--- To import data into mysql:
+-- Aggregations
 --
--- Clone this repository: git clone git@github.com:overthemike/movies.git
--- cd into the movies folder
--- run this command: mysql -u root < movies.sql
--- Normal Mode
---
--- Complete the following query objectives:
---
--- Select all columns and rows from the movies table
-SELECT
-    *
-FROM
-    movies.movies
+-- Get the average rating for a movie
 
--- Select only the title and id of the first 10 rows
-SELECT
-    *
-FROM
-    movies.movies
 
--- Find the movie with the id of 485
-SELECT
-    *
-FROM
-    movies.movies
-WHERE
-    movieid = '485'
+-- Get the total ratings for a movie
 
--- Find the id (only that column) of the movie Made in America (1993)
-SELECT
-    movieid
-FROM
-    movies.movies
-WHERE
-    title = 'Made in America (1993)'
 
--- Find the first 10 sorted alphabetically
-SELECT
-    *
-FROM
-    movies.movies
-ORDER BY title DESC
-LIMIT 10
+-- Get the total movies for a genre
 
--- Find all movies from 2002
-SELECT
-    *
-FROM
-    movies.movies
-WHERE
-    title LIKE '%(2002)'
 
--- Find out what year the Godfather came out
-SELECT
-    *
-FROM
-    movies.movies
-   WHERE title LIKE 'godfather%'
+-- Get the average rating for a user
 
--- Without using joins find all the comedies
-SELECT
-    *
-FROM
-    movies.movies
-WHERE
-    genres LIKE '%comedy%'
+
+-- Find the user with the most ratings
+
+
+-- Find the user with the highest average rating
+
+
+-- Find the user with the highest average rating with more than 50 reviews
+
+
+-- Find the movies with an average rating over 4
+
+
+-- For each genre find the total number of reviews as well as the average review sort by highest average review.
+
+
+-- Joins
+
+-- Find all comedies
+
 
 -- Find all comedies in the year 2000
-SELECT
-    *
-FROM
-    movies.movies
-WHERE
-    genres LIKE '%comedy%'
-        AND title LIKE '%(2000)'
+
 
 -- Find any movies that are about death and are a comedy
-SELECT
-    *
-FROM
-    movies.movies
-WHERE
-    genres LIKE '%comedy%'
-        AND title LIKE '%death%'
+
 
 -- Find any movies from either 2001 or 2002 with a title containing super
-SELECT 
-    *
-FROM
-    movies.movies
-WHERE
-    (title LIKE '%(2001)'
-        OR title LIKE '%(2002)')
-        AND title LIKE '%super%'
-
--- Hard Mode
-
--- Use concat and research about internet movie database to produce a valid url from the imdbid
-
-
--- Use concat and research about the movie database to produce a valid url from tmdbid
-
-
--- Using SQL, normalize the tags in the tags table. Make them lowercased and replace the spaces with '-'s
